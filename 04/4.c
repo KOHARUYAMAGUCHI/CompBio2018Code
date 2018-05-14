@@ -8,7 +8,7 @@ int main(void){
   fp=fopen("output_4.csv","w");
 
   a=8;
-  b=5;
+  b=50;
   c=1;
   d=6;
   e=1;
