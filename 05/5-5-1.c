@@ -3,7 +3,7 @@
 #include<time.h>
 
 int main(void){
-  int r,M,N,x,i,a,t,aa;
+  int r,M,N,x,i,a,t;
   srand(time(NULL));
   M=1;
   N=6;
@@ -38,12 +38,7 @@ for(t=1;t<1001;t++){
           else if(t==1000){
             printf("%d\n", a/1000);
             }
-            for(i=0;i<N;i++){
-              A=A+a[i];
-            }
-            if(A=0){
-              break;
-            }
+
 }
   return 0;
 }
