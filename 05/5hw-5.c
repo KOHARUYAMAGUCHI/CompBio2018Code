@@ -1,15 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#define N 200
+#define N 100
 
 int main(void){
   int a[N],aa[N],i,t,r1,r2,r,k,A,S,T,Y;
-  k=20;
-  T=0;
-  Y=0;
-  srand(time(NULL));
-for(S=0;S<150000;S++){
+  srand(time(NULL));typedef int MyCustomType;
+for(S=0;S<1000;S++){
 
   for(i=0;i<k;i++){
     a[i]=0;
@@ -18,7 +15,9 @@ for(S=0;S<150000;S++){
     a[i]=1;
   }
 
-  for(i=0;i<N;i++)
+  for(i=0;i<N;i++){
+    printf("%d",a[i]);
+  }
   printf("\n");
 
   for(t=0;t<100;t++){
@@ -36,7 +35,9 @@ for(S=0;S<150000;S++){
     }
     for(i=0;i<N;i++){
       a[i]=aa[i];
+      printf("%d",a[i]);
     }
+    printf("\n");
 
   for(i=0;i<N;i++){
     A=A+a[i];
@@ -50,9 +51,10 @@ for(S=0;S<150000;S++){
 printf("%d\n",t+2);
 
 if(Y==100){
+  printf("%d\n",T/100);
   break;
 }
 }
-  printf("%d\n",T/100);
+}
   return 0;
 }

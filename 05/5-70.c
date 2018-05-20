@@ -1,28 +1,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#define N 200
+#define N 50
 
 int main(void){
-  int a[N],aa[N],i,t,r1,r2,r,k,A,S,T,Y;
-  k=20;
-  T=0;
-  Y=0;
+  int a[N],aa[N],i,t,r1,r2,r;
   srand(time(NULL));
-for(S=0;S<150000;S++){
 
-  for(i=0;i<k;i++){
+  for(i=0;i<(N/2);i++){
     a[i]=0;
+    a[i+N/2]=1;
   }
-  for(i=k;i<N;i++){
-    a[i]=1;
+  for(i=0;i<N;i++){
+    printf("%d",a[i]);
   }
-
-  for(i=0;i<N;i++)
   printf("\n");
 
   for(t=0;t<100;t++){
-    A=0;
     for(i=0;i<N;i++){
       r1=rand()%N;
       r2=rand()%N;
@@ -36,23 +30,9 @@ for(S=0;S<150000;S++){
     }
     for(i=0;i<N;i++){
       a[i]=aa[i];
+      printf("%d",a[i]);
     }
-
-  for(i=0;i<N;i++){
-    A=A+a[i];
+    printf("\n");
   }
-  if(A==0){
-    Y=Y+1;
-    T=T+t+2;
-    break;
-  }
-}
-printf("%d\n",t+2);
-
-if(Y==100){
-  break;
-}
-}
-  printf("%d\n",T/100);
   return 0;
 }
