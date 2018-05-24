@@ -9,7 +9,7 @@ int main(void){
   N=1;
 
   FILE *fp;
-  fp=fopen("output_rand.csv","w");
+  fp=fopen("output_rand1.csv","w");
 
   for(i=0;i<10000;i++){
     x1=(((double)rand()+1)/((double)RAND_MAX+1))*N;
