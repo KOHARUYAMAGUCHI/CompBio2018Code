@@ -5,16 +5,16 @@ int main(void){
   double r,t,dt,B,S,SS,I,II,R,RR;
 
   FILE *fp;
-  fp=fopen("output_6-4.csv","w");
+  fp=fopen("output_6-4-5.csv","w");
 
   dt=0.0001;
   B=0.002;
   r=0.1;
 
   t=0.0;
-  S=1000.0;
-  I=500.0;
-  R=10.0;
+  S=100.0;
+  I=5.0;
+  R=0.0;
 
   fprintf(fp,"%f,%f,%f,%f\n",t,S,I,R);
 
