@@ -63,7 +63,7 @@ int rule(int cell1, int cell2, int cell3){
   if(cell1==1){
     if(cell2==1){
       if(cell3==1){
-        return 1;
+        return 0;
       }
       else if(cell3==0){
         return 0;
@@ -71,10 +71,10 @@ int rule(int cell1, int cell2, int cell3){
     }
     else if(cell2==0){
       if(cell3==1){
-        return 1;
+        return 0;
       }
       else if(cell3==0){
-        return 1;
+        return 0;
       }
     }
   }
